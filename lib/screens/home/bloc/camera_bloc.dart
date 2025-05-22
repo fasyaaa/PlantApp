@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:bloc/bloc.dart';
 import 'package:camera/camera.dart';
+import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
 
 part 'camera_event.dart';
