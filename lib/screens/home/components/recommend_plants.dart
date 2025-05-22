@@ -42,7 +42,6 @@ class RecommendPlants extends StatelessWidget {
             price: 440,
             press: () {},
           ),
-          
         ],
       ),
     );
@@ -76,7 +75,21 @@ class RecommendPlantCard extends StatelessWidget {
       width: size.width * 0.4,
       child: Column(
         children: <Widget>[
-          Image.asset(image),
+          Container(
+            height: 180,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(10),
+                topRight: Radius.circular(10),
+              ),
+              image: DecorationImage(
+                image: AssetImage(image),
+                fit: BoxFit.cover,
+                alignment: Alignment.center,
+              ),
+            ),
+          ),
           GestureDetector(
             onTap: press,
             child: Container(
@@ -91,7 +104,7 @@ class RecommendPlantCard extends StatelessWidget {
                   BoxShadow(
                     offset: Offset(0, 10),
                     blurRadius: 50,
-                    color: AppColors.primary.withValues(alpha: 0.23),
+                    color: AppColors.primary.withOpacity(0.23),
                   ),
                 ],
               ),
@@ -99,15 +112,16 @@ class RecommendPlantCard extends StatelessWidget {
                 children: <Widget>[
                   RichText(
                     text: TextSpan(
+                      style: Theme.of(context).textTheme.bodyMedium,
                       children: [
                         TextSpan(
-                          text: "${title.toUpperCase()}\n",
+                          text: "$title\n".toUpperCase(),
                           style: Theme.of(context).textTheme.labelLarge,
                         ),
                         TextSpan(
-                          text: "${title.toUpperCase()}",
+                          text: country.toUpperCase(),
                           style: TextStyle(
-                            color: AppColors.primary.withValues(alpha: 0.5),
+                            color: AppColors.primary.withOpacity(0.5),
                           ),
                         ),
                       ],
