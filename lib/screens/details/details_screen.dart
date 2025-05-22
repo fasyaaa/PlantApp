@@ -1,21 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/home/components/body.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Dashboard"),
-        actions: const [],
-      ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-            children: [],
-        ),
-      ),
-    );
+    return Scaffold(body: Body());
   }
 }
