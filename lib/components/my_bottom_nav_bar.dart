@@ -29,15 +29,15 @@ class MyBottomNavBar extends StatelessWidget {
         children: <Widget>[
           IconButton(
             onPressed: () {},
-            icon: SvgPicture.asset("assets/icons/flower.svg"),
+            icon: SvgPicture.asset("assets/icons/flower.svg", width: 20, height: 20, color: AppColors.primary),
           ),
           IconButton(
             onPressed: () {},
-            icon: SvgPicture.asset("assets/icons/heart.svg"),
+            icon: SvgPicture.asset("assets/icons/heart.svg", width: 20, height: 20, color: AppColors.primary,),
           ),
           IconButton(
             onPressed: () {},
-            icon: SvgPicture.asset("assets/icons/user.svg"),
+            icon: SvgPicture.asset("assets/icons/user.svg", width: 20, height: 20, color: AppColors.primary,),
           ),
         ],
       ),
