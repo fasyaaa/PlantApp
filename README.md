@@ -30,7 +30,6 @@ Photo
 
 Map
 ![Screenshot_1747947840](https://github.com/user-attachments/assets/962bbfa1-1d8c-477a-8e90-92c314d5d3ef)
-![Screenshot_1747947844](https://github.com/user-attachments/assets/0a565504-a921-4abc-b6cd-5f9b9bb2d27f)
 ![Screenshot_1747947844](https://github.com/user-attachments/assets/b9321458-f564-4b7f-b6bf-827151fd4137)
 ![Screenshot_1747947847](https://github.com/user-attachments/assets/54deec18-f913-420f-8650-6e2cddecc555)
 ![Screenshot_1747947849](https://github.com/user-attachments/assets/bcd3878b-3141-4cd8-8d4c-98fc97cd5934)
