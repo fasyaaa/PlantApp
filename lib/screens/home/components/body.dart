@@ -13,7 +13,7 @@ class Body extends StatelessWidget {
     // enable scrolling on small device
     return SingleChildScrollView(
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        // crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           HeaderWithSearchBox(size: size),
           TitleWithMoreBbtn(title: "Recomended", press: () {}),
