@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:plant_app/screens/details/components/icon_card.dart';
 import 'package:plant_app/theme_constants.dart';
 
 class ImageAndIcons extends StatelessWidget {
