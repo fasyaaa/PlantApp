@@ -9,7 +9,7 @@ class HeaderWithSearchBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.only(bottom: AppSpacing.defaultPadding * 2.5),
       height: size.height * 0.2,
@@ -35,7 +35,17 @@ class HeaderWithSearchBox extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                Image.asset('assets/images/logo.svg'),
+                ClipOval(
+                  child: Container(
+                    width: 60,
+                    height: 60,
+                    color: Colors.white,
+                    child: Image.asset(
+                      'assets/images/logo.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -76,7 +86,12 @@ class HeaderWithSearchBox extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SvgPicture.asset("assets/icons/search.svg"),
+                  SvgPicture.asset(
+                    "assets/icons/search.svg",
+                    width: 20,
+                    height: 20,
+                    color: AppColors.primary,
+                  ),
                 ],
               ),
             ),
