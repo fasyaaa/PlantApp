@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/home/components/header_with_searchbox.dart';
 
 class Body extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Dashboard"),
-        actions: const [],
-      ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-            children: [],
-        ),
+    // give total height and width of our screen
+    Size size = MediaQuery.of(context).size;
+    // enable scrolling on small device
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[HeaderWithSearchBox(size: size)],
       ),
     );
   }
