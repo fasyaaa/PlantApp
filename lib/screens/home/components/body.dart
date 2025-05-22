@@ -1,20 +1,56 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/theme_constants.dart';
 
 class Body extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Dashboard"),
-        actions: const [],
-      ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-            children: [],
+    Size size = MediaQuery.of(context).size;
+    return Column(
+      children: <Widget>[
+        Container(
+          height: size.height * 0.2,
+          decoration: BoxDecoration(
+            color: AppColors.primary,
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(36),
+              bottomRight: Radius.circular(36),
+            ),
+          ),
         ),
-      ),
+        Positioned(
+          bottom: 0,
+          left: 0,
+          right: 0,
+          child: Container(
+            margin: EdgeInsets.symmetric(horizontal: AppSpacing.defaultPadding),
+            padding: EdgeInsets.symmetric(
+              horizontal: AppSpacing.defaultPadding,
+            ),
+            height: 54,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  offset: Offset(0, 10),
+                  blurRadius: 50,
+                  color: AppColors.primary.withValues(alpha: 0.23),
+                ),
+              ],
+            ),
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "Search",
+                hintStyle: TextStyle(
+                  color: AppColors.primary.withValues(alpha: 0.5),
+                ),
+                enabledBorder: InputBorder.none,
+                focusedBorder: InputBorder.none
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
