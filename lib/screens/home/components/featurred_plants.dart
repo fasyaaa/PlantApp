@@ -1,19 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/theme_constants.dart';
 
-class FeaturredPlants extends StatelessWidget {
-  const FeaturredPlants({super.key});
+class FeaturePlants extends StatelessWidget {
+  const FeaturePlants({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Dashboard"),
-        actions: const [],
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: <Widget>[
+          FeaturePlantCard(
+            image: "assets/images/bottom_img_1.png",
+            press: () {},
+          ),
+          FeaturePlantCard(
+            image: "assets/images/bottom_img_2.png",
+            press: () {},
+          ),
+        ],
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-            children: [],
+    );
+  }
+}
+
+class FeaturePlantCard extends StatelessWidget {
+  const FeaturePlantCard({super.key, required this.image, required this.press});
+  final String image;
+  final VoidCallback press;
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return GestureDetector(
+      onTap: press,
+      child: Container(
+        margin: EdgeInsets.only(
+          left: AppSpacing.defaultPadding,
+          top: AppSpacing.defaultPadding / 2,
+          bottom: AppSpacing.defaultPadding / 2,
+        ),
+        width: size.width * 0.8,
+        height: 185,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          image: DecorationImage(fit: BoxFit.cover, image: AssetImage(image)),
         ),
       ),
     );
