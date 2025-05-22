@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:plant_app/screens/home/bloc/camera_bloc.dart';
 import 'package:plant_app/screens/home/bloc/camera_page.dart';
+import 'package:plant_app/screens/home/bloc/gmaps_bloc/maps_page.dart';
 import 'package:plant_app/screens/home/components/featurred_plants.dart';
 import 'package:plant_app/screens/home/components/header_with_searchbox.dart';
 import 'package:plant_app/screens/home/components/recommend_plants.dart';
@@ -39,6 +40,22 @@ class _BodyState extends State<Body> {
       });
     }
   }
+
+  Future<void> _openMap() async {
+  final selected = await Navigator.push<String>(
+    context,
+    MaterialPageRoute(
+      builder: (_) => MapPage(),
+    ),
+  );
+
+  if (selected != null && mounted) {
+    setState(() {
+      selectedAddress = selected;
+    });
+  }
+}
+
 
   void _showImageOptions() {
     showModalBottomSheet(
@@ -110,6 +127,8 @@ class _BodyState extends State<Body> {
             size: size,
             onCameraTap: _showImageOptions,
             profileImage: _profileImage,
+            onMapTap: _openMap,
+            selectedLoc: selectedAddress
           ),
           TitleWithMoreBbtn(title: "Recomended", press: () {}),
           RecommendPlants(),
