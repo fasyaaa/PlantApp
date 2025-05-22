@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plant_app/screens/details/details_screen.dart';
 import 'package:plant_app/theme_constants.dart';
 
 class RecommendPlants extends StatelessWidget {
@@ -18,7 +19,7 @@ class RecommendPlants extends StatelessWidget {
             press: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => DetailScreen()),
+                MaterialPageRoute(builder: (context) => DetailsScreen()),
               );
             },
           ),
@@ -30,7 +31,7 @@ class RecommendPlants extends StatelessWidget {
             press: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => DetailScreen()),
+                MaterialPageRoute(builder: (context) => DetailsScreen()),
               );
             },
           ),
