@@ -3,7 +3,7 @@ import 'package:plant_app/screens/details/components/image_and_icons.dart';
 import 'package:plant_app/screens/details/components/title_and_price.dart';
 import 'package:plant_app/theme_constants.dart';
 
-class Body extends StatelessWidget {
+class Body2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
