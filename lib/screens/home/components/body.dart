@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:plant_app/screens/home/components/header_with_searchbox.dart';
+import 'package:plant_app/screens/home/components/title_with_more_bbtn.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -10,7 +11,10 @@ class Body extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[HeaderWithSearchBox(size: size)],
+        children: <Widget>[
+          HeaderWithSearchBox(size: size),
+          TitleWithMoreBbtn(title: "Recomended", press: () {}),
+        ],
       ),
     );
   }
