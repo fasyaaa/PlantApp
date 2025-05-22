@@ -21,7 +21,7 @@ class IconCard extends StatelessWidget {
           BoxShadow(
             offset: Offset(0, 15),
             blurRadius: 22,
-            color: AppColors.background.withValues(alpha: 0.22),
+            color: AppColors.background.withOpacity(0.22),
           ),
           BoxShadow(
             offset: Offset(-15, -15),
